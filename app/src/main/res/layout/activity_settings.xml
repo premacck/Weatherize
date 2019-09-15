@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:background="@drawable/bg_primary_with_bottom_shadow"
+      app:title="@string/settings"
+      app:titleTextColor="@android:color/white"
+      app:navigationIcon="@drawable/ic_arrow_back"
+      android:layout_height="?attr/actionBarSize" />
+
+  <TextView
+      android:id="@+id/temperature_unit_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/toolbar"
+      android:layout_marginTop="@dimen/dimen_8dp"
+      android:layout_marginBottom="@dimen/dimen_8dp"
+      android:layout_toStartOf="@+id/temp_layout"
+      android:ellipsize="end"
+      android:gravity="start|center_vertical"
+      android:maxLines="1"
+      android:padding="@dimen/dimen_14dp"
+      android:singleLine="true"
+      android:text="@string/temperature_unit"
+      android:textColor="@color/colorSecondaryText"
+      android:textSize="@dimen/text_16sp" />
+
+  <LinearLayout
+      android:id="@+id/temp_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/temperature_unit_text"
+      android:layout_alignBottom="@+id/temperature_unit_text"
+      android:layout_alignParentEnd="true"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:paddingStart="@dimen/dimen_14dp"
+      android:paddingEnd="@dimen/dimen_14dp">
+
+    <com.prembros.weatherize.view.customviews.CustomCheckedTextView
+        android:id="@+id/ctv_metric"
+        style="@style/AppTheme.CustomTextView.Checked"
+        android:layout_weight="1"
+        android:background="@drawable/bg_btn_white_curved_left"
+        android:text="@string/metric" />
+
+    <com.prembros.weatherize.view.customviews.CustomCheckedTextView
+        android:id="@+id/ctv_imperial"
+        style="@style/AppTheme.CustomTextView.Checked"
+        android:layout_weight="1"
+        android:background="@drawable/bg_btn_white_curved_right"
+        android:text="@string/imperial" />
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/separator1"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@+id/temperature_unit_text"
+      android:background="@color/colorShadow" />
+
+  <TextView
+      android:id="@+id/forecast_limit_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/separator1"
+      android:layout_marginTop="@dimen/dimen_8dp"
+      android:layout_marginBottom="@dimen/dimen_8dp"
+      android:ellipsize="end"
+      android:gravity="start|center_vertical"
+      android:maxLines="1"
+      android:padding="@dimen/dimen_14dp"
+      android:singleLine="true"
+      android:text="@string/forecast_limit"
+      android:textColor="@color/colorSecondaryText"
+      android:textSize="@dimen/text_16sp" />
+
+  <Spinner
+      android:id="@+id/forecast_limit_selector"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/forecast_limit_text"
+      android:layout_alignBottom="@+id/forecast_limit_text"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/dimen_14dp"
+      android:entries="@array/forecast_limit"
+      android:gravity="center_horizontal"
+      android:paddingStart="@dimen/dimen_14dp"
+      android:textAlignment="center"
+      tools:ignore="RtlSymmetry" />
+
+  <TextView
+      android:id="@+id/separator2"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@+id/forecast_limit_text"
+      android:background="@color/colorShadow" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/location_not_available_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingEnd="14dp"
+    android:paddingStart="14dp"
+    android:background="@color/material_grey50">
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="36dp"
+      android:layout_marginTop="36dp"
+      app:srcCompat="@drawable/ic_navigation" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:padding="4dp"
+      android:text="@string/see_weather_at_your_current_location"
+      android:textColor="@color/colorPrimaryText"
+      android:textSize="@dimen/text_16sp" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:padding="4dp"
+      android:text="@string/in_order_to_see_weather"
+      android:textColor="@color/colorSecondaryText" />
+
+  <TextView
+      android:id="@+id/turn_on_location_btn"
+      style="@style/AppTheme.RoundedMaterialButton"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:text="@string/enable_location_services" />
+
+</LinearLayout>

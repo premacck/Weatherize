@@ -1,0 +1,87 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <com.prembros.weatherize.view.customviews.ShimmerLinearLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+      <com.prembros.weatherize.view.customviews.CustomTextView
+          android:id="@+id/weather_city_name"
+          android:minWidth="150dp"
+          style="@style/AppTheme.CustomTextView.Big" />
+
+      <com.prembros.weatherize.view.customviews.CustomTextView
+          android:id="@+id/weather_date"
+          android:minWidth="200dp"
+          style="@style/AppTheme.CustomTextView.Default"
+          android:paddingBottom="@dimen/dimen_8dp" />
+
+      <include layout="@layout/separator" />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:animateLayoutChanges="true">
+
+        <com.prembros.weatherize.view.customviews.CustomTextView
+            android:id="@+id/weather_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_28dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/weather_icon"
+            android:textSize="@dimen/text_huge" />
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="@dimen/dimen_14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_view_shimmer"
+            android:contentDescription="@string/weather_icon" />
+
+      </RelativeLayout>
+
+      <include layout="@layout/separator" />
+
+      <com.prembros.weatherize.view.customviews.CustomTextView
+          android:id="@+id/weather_wind_speed"
+          android:minWidth="200dp"
+          style="@style/AppTheme.CustomTextView.Default" />
+
+      <com.prembros.weatherize.view.customviews.CustomTextView
+          android:id="@+id/weather_wind_degree"
+          android:minWidth="150dp"
+          style="@style/AppTheme.CustomTextView.Default" />
+
+      <com.prembros.weatherize.view.customviews.CustomTextView
+          android:id="@+id/weather_humidity"
+          android:minWidth="150dp"
+          style="@style/AppTheme.CustomTextView.Default" />
+
+      <com.prembros.weatherize.view.customviews.CustomTextView
+          android:id="@+id/weather_condition"
+          android:minWidth="200dp"
+          style="@style/AppTheme.CustomTextView.Default" />
+
+      <include layout="@layout/separator" />
+
+    </com.prembros.weatherize.view.customviews.ShimmerLinearLayout>
+
+  </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

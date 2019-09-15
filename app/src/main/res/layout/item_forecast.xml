@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_condition"
+      style="@style/AppTheme.CustomTextView.List.Large"
+      android:minWidth="240dp"
+      android:gravity="start|center_vertical"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/iv_forecast_temp"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="@dimen/dimen_14dp"
+      android:layout_marginTop="@dimen/dimen_14dp"
+      android:contentDescription="@string/sun"
+      android:padding="@dimen/dimen_8dp"
+      android:src="@drawable/ic_temperature"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/forecast_condition" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_temp_max"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:drawableStart="@drawable/ic_arrow_up"
+      android:drawablePadding="@dimen/dimen_4dp"
+      android:minWidth="100dp"
+      app:layout_constraintStart_toEndOf="@+id/iv_forecast_temp"
+      app:layout_constraintTop_toTopOf="@+id/iv_forecast_temp" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_temp_min"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:drawableStart="@drawable/ic_arrow_down"
+      android:drawablePadding="@dimen/dimen_4dp"
+      android:minWidth="100dp"
+      app:layout_constraintStart_toEndOf="@+id/iv_forecast_temp"
+      app:layout_constraintTop_toBottomOf="@+id/forecast_temp_max" />
+
+  <ImageView
+      android:id="@+id/iv_forecast_sun"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="@dimen/dimen_14dp"
+      android:layout_marginTop="@dimen/dimen_14dp"
+      android:contentDescription="@string/sun"
+      android:padding="@dimen/dimen_8dp"
+      android:src="@drawable/ic_sun"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/iv_forecast_temp" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_sun_rise"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:drawableStart="@drawable/ic_arrow_up"
+      android:drawablePadding="@dimen/dimen_4dp"
+      android:minWidth="100dp"
+      app:layout_constraintStart_toEndOf="@+id/iv_forecast_sun"
+      app:layout_constraintTop_toTopOf="@+id/iv_forecast_sun" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_sun_set"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:drawableStart="@drawable/ic_arrow_down"
+      android:drawablePadding="@dimen/dimen_4dp"
+      android:minWidth="100dp"
+      app:layout_constraintStart_toEndOf="@+id/iv_forecast_sun"
+      app:layout_constraintTop_toBottomOf="@+id/forecast_sun_rise" />
+
+  <ImageView
+      android:id="@+id/iv_forecast_moon"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="@dimen/dimen_14dp"
+      android:layout_marginTop="@dimen/dimen_14dp"
+      android:contentDescription="@string/sun"
+      android:padding="@dimen/dimen_8dp"
+      android:src="@drawable/ic_moon"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/iv_forecast_sun" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_moon_rise"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:drawableStart="@drawable/ic_arrow_up"
+      android:drawablePadding="@dimen/dimen_4dp"
+      android:minWidth="100dp"
+      app:layout_constraintStart_toEndOf="@+id/iv_forecast_moon"
+      app:layout_constraintTop_toTopOf="@+id/iv_forecast_moon" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_moon_set"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:drawableStart="@drawable/ic_arrow_down"
+      android:drawablePadding="@dimen/dimen_4dp"
+      android:minWidth="100dp"
+      app:layout_constraintStart_toEndOf="@+id/iv_forecast_moon"
+      app:layout_constraintTop_toBottomOf="@+id/forecast_moon_rise" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_precipitation"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:layout_marginTop="@dimen/dimen_14dp"
+      android:drawableStart="@drawable/ic_precipitation"
+      android:drawablePadding="@dimen/dimen_32dp"
+      android:gravity="center_vertical"
+      android:minWidth="140dp"
+      android:paddingStart="@dimen/dimen_8dp"
+      android:paddingEnd="@dimen/dimen_8dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/iv_forecast_moon" />
+
+  <com.prembros.weatherize.view.customviews.CustomTextView
+      android:id="@+id/forecast_humidity"
+      style="@style/AppTheme.CustomTextView.List.Normal"
+      android:layout_marginTop="@dimen/dimen_14dp"
+      android:layout_marginBottom="@dimen/dimen_14dp"
+      android:drawableStart="@drawable/ic_humidity"
+      android:drawablePadding="@dimen/dimen_32dp"
+      android:gravity="center_vertical"
+      android:minWidth="140dp"
+      android:paddingStart="@dimen/dimen_8dp"
+      android:paddingEnd="@dimen/dimen_8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/forecast_precipitation" />
+
+  <com.prembros.weatherize.view.customviews.ShimmerLinearLayout
+      android:id="@+id/root_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dimen_14dp"
+      android:layout_marginBottom="@dimen/dimen_14dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/iv_forecast_temp"
+      app:layout_constraintVertical_bias="0">
+
+    <ImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_weight="0.18"
+        android:contentDescription="@string/weather_icon"
+        android:padding="@dimen/dimen_4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image_view_shimmer" />
+
+  </com.prembros.weatherize.view.customviews.ShimmerLinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

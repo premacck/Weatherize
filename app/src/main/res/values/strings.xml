@@ -1,0 +1,55 @@
+<resources>
+  <string name="app_name">Weatherize</string>
+  <string name="tab_text_1">Today</string>
+  <string name="tab_text_2">Tomorrow</string>
+  <string name="tab_text_3">Days</string>
+  <string name="action_settings">Settings</string>
+  <string name="section_format">Hello World from section: %1$d</string>
+  <string name="apixu_api_key">b07ef8fe29da4cff99480026183003</string>
+  <!--  <string name="apixu_api_key">2b068d80fac8bf1ce380577c833bd589</string>-->
+  <string name="google_api_key">AIzaSyC7pFdTyxD2iCFh_KcNbiYLuXauq178Y2g</string>
+  <string name="base_apixu_url">http://api.apixu.com</string>
+  <string name="search_your_city_here">Search your city here</string>
+  <string name="degree">°</string>
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="weather_icon">Weather icon</string>
+  <string name="something_went_wrong">Something went wrong, please try again</string>
+  <string name="see_weather_at_your_current_location">See weather at your current location</string>
+  <string name="in_order_to_see_weather">
+        In order to see weather at your current location, you need to allow us to access your location services first.
+        \nOr choose a location from the top search bar.
+    </string>
+  <string name="enable_location_services">Allow location access</string>
+  <string name="turn_on_location">Turn on location</string>
+  <string name="turn_on_location_message">
+        In order for us to find your current location, please enable the location services.
+        \nOr choose a location from the top search bar.
+    </string>
+  <string name="location_services_required">Location services are required to get weather at your current location.</string>
+  <string name="could_not_find_city">Could not find your city, please try searching for it</string>
+  <string name="celsius">Celsius</string>
+  <string name="fahrenheit">Fahrenheit</string>
+  <string name="forecast_limit">Forecast limit</string>
+  <string name="temperature_unit">Temperature Unit</string>
+  <string name="settings">Settings</string>
+  <string name="back_button">Back button</string>
+  <string name="wind_speed">Wind speed : %1$d</string>
+  <string name="wind_degree">Wind degree : %1$d</string>
+  <string name="humidity">Humidity : %1$s</string>
+  <string name="condition">Condition : %1$s</string>
+  <string name="metric">Metric</string>
+  <string name="imperial">Imperial</string>
+  <string name="enable">Enable</string>
+  <string name="close">Close</string>
+  <string name="sun">Sun</string>
+
+  <string-array name="forecast_limit">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+  </string-array>
+</resources>

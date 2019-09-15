@@ -1,0 +1,166 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/shuttle_grey</item>
+    <item name="colorPrimaryDark">@color/shuttle_grey</item>
+    <item name="colorAccent">@color/crusoe</item>
+  </style>
+
+  <style name="CustomButton">
+    <item name="android:layout_margin">16dp</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:foreground">@drawable/ripple_light_rect_curved_corners</item>
+  </style>
+
+  <style name="CustomButton.MatchWrap">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="CustomButton.MatchWrap.Blue">
+    <item name="android:background">@drawable/bg_fill_blue</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="CustomButton.MatchWrap.Red">
+    <item name="android:background">@drawable/bg_fill_red</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="CustomButton.MatchWrap.Green">
+    <item name="android:background">@drawable/bg_fill_green</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="CustomButton.MatchWrap.Husk">
+    <item name="android:background">@drawable/bg_fill_husk</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="CustomButton.MatchWrap.Orange">
+    <item name="android:background">@drawable/bg_fill_orange</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="CustomButton.MatchWrap.Grey">
+    <item name="android:background">@drawable/bg_fill_grey</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <style name="AppTheme.SearchBar">
+    <item name="android:textAppearance">@style/CustomTextAppearance</item>
+  </style>
+
+  <style name="CustomTextAppearance" parent="TextAppearance.AppCompat">
+    <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+    <item name="android:textColorPrimaryInverse">@android:color/white</item>
+    <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+    <item name="android:textColorSecondaryInverse">@android:color/white</item>
+    <item name="android:textColorTertiary">@color/colorTertiaryText</item>
+    <item name="android:textColorTertiaryInverse">@android:color/white</item>
+    <item name="android:textColorHint">@color/colorTertiaryText</item>
+    <item name="android:textColorHintInverse">@color/colorTertiaryTextDark</item>
+    <item name="android:textColorHighlight">@color/colorSecondaryText</item>
+
+    <item name="colorControlNormal">?android:attr/textColorSecondary</item>
+    <item name="colorControlHighlight">@color/colorRippleDark</item>
+    <item name="colorButtonNormal">@color/colorSecondaryText</item>
+    <item name="colorSwitchThumbNormal">@color/material_grey400</item>
+  </style>
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+  <style name="AppTheme.CustomTabLayout" parent="Widget.Design.TabLayout">
+    <!--<item name="android:background">@drawable/bg_white_with_top_shadow</item>-->
+    <item name="tabTextAppearance">@style/AppTheme.CustomTabTextAppearance</item>
+  </style>
+
+  <style name="AppTheme.CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+    <item name="android:textColor">?android:textColorSecondary</item>
+    <item name="textAllCaps">false</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView.Big">
+    <item name="android:layout_marginLeft">@dimen/dimen_14dp</item>
+    <item name="android:layout_marginRight">@dimen/dimen_14dp</item>
+    <item name="android:layout_marginTop">@dimen/dimen_14dp</item>
+    <item name="android:gravity">start|center_vertical</item>
+    <item name="android:textSize">@dimen/text_30sp</item>
+    <item name="android:textColor">@color/colorSecondaryText</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView.Default">
+    <item name="android:layout_margin">@dimen/dimen_14dp</item>
+    <item name="android:gravity">start|center_vertical</item>
+    <item name="android:textSize">@dimen/text_20sp</item>
+    <item name="android:textColor">@color/colorSecondaryText</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView.List">
+    <item name="android:layout_marginLeft">@dimen/dimen_14dp</item>
+    <item name="android:layout_marginRight">@dimen/dimen_14dp</item>
+    <item name="android:layout_marginTop">@dimen/dimen_4dp</item>
+    <item name="android:layout_marginBottom">@dimen/dimen_4dp</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView.List.Default">
+    <item name="android:gravity">end|right|center_vertical</item>
+    <item name="android:textSize">@dimen/text_16sp</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView.List.Large">
+    <item name="android:gravity">end|right|center_vertical</item>
+    <item name="android:textSize">@dimen/text_20sp</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView.List.Normal">
+    <item name="android:gravity">start|left|center_vertical</item>
+    <item name="android:textSize">@dimen/text_14sp</item>
+  </style>
+
+  <style name="AppTheme.CustomTextView.Checked">
+    <item name="android:paddingLeft">@dimen/dimen_14dp</item>
+    <item name="android:paddingRight">@dimen/dimen_14dp</item>
+    <item name="android:paddingTop">@dimen/dimen_8dp</item>
+    <item name="android:paddingBottom">@dimen/dimen_8dp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textSize">@dimen/text_14sp</item>
+    <item name="android:textColor">@color/colorPrimaryText</item>
+  </style>
+
+  <style name="AppTheme.CustomRecyclerView">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:paddingTop">@dimen/dimen_14dp</item>
+    <item name="android:clipToPadding">false</item>
+  </style>
+
+  <style name="AppTheme.RoundedMaterialButton" parent="Widget.AppCompat.Button.Colored">
+    <item name="android:background">@drawable/bg_button_accent</item>
+    <item name="android:foreground">@drawable/ripple_dark_rounded_2dp</item>
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:textSize">@dimen/text_16sp</item>
+  </style>
+
+</resources>

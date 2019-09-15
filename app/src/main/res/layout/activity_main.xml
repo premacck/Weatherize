@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_grey100"
+    android:fitsSystemWindows="true">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/appbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/appbar_padding_top"
+      android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_size"
+        android:layout_weight="1"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|snap"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@null">
+
+      <com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+          android:id="@+id/search_bar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:drawableStart="@drawable/ic_search"
+          android:drawablePadding="8dp"
+          android:ellipsize="end"
+          android:hint="@string/search_your_city_here"
+          android:imeOptions="actionDone"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:textColor="@android:color/white"
+          android:textColorHint="@color/material_grey200"
+          android:theme="@style/AppTheme.SearchBar"
+          app:backgroundTint="@color/material_grey200"
+          app:pacv_googleMapsApiKey="@string/google_api_key"
+          app:pacv_resultType="geocode" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        style="@style/AppTheme.CustomTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_size"
+        android:background="@drawable/bg_primary_with_bottom_shadow"
+        app:tabIndicatorColor="@color/off_white"
+        app:tabIndicatorHeight="@dimen/dimen_4dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@color/off_white">
+
+      <com.google.android.material.tabs.TabItem
+          android:id="@+id/tabItem"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/tab_text_1" />
+
+      <com.google.android.material.tabs.TabItem
+          android:id="@+id/tabItem2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/tab_text_2" />
+
+      <com.google.android.material.tabs.TabItem
+          android:id="@+id/tabItem3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/tab_text_3" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:id="@+id/secondary_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+  </RelativeLayout>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/current_location_weather"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|end"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:src="@drawable/ic_my_location"
+      app:fabSize="normal" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
