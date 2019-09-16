@@ -44,6 +44,7 @@ import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.sdk27.coroutines.onEditorAction
 import org.jetbrains.anko.sdk27.coroutines.onLongClick
+import org.jetbrains.anko.support.v4.onPageChangeListener
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -109,6 +110,9 @@ class MainActivity : BaseActivity(), FragmentNavigation, OnPlaceSelectedListener
       updateCurrentCity()
     }
     current_location_weather.onLongClick { toast(R.string.see_weather_at_your_current_location) }
+    container.onPageChangeListener {
+      onPageSelected { container.hideKeyboard() }
+    }
   }
 
   override fun onPlaceSelected(place: Place) {

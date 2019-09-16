@@ -19,6 +19,7 @@
 
     <activity
         android:name="com.prembros.weatherize.view.MainActivity"
+        android:configChanges="keyboardHidden|orientation|keyboard"
         android:launchMode="singleInstance"
         android:screenOrientation="portrait">
       <intent-filter>
