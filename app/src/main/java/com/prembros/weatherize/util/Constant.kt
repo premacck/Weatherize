@@ -7,6 +7,7 @@ const val APIXU_BASE_URL = "https://api.apixu.com"
 const val APIXU_API_KEY = "b07ef8fe29da4cff99480026183003"
 const val DEGREE = '\u00B0'
 const val HTTP = "http:"
+const val HTTPS = "https:"
 const val CELSIUS = " C"
 const val FAHRENHEIT = " F"
 const val KPH = " Kph"

@@ -18,6 +18,7 @@
     <com.airbnb.epoxy.EpoxyRecyclerView
         android:id="@+id/forecast_list"
         style="@style/AppTheme.CustomRecyclerView"
+        android:paddingBottom="@dimen/dimen_16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_forecast" />
 

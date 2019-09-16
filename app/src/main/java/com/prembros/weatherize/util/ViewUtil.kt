@@ -1,15 +1,18 @@
 package com.prembros.weatherize.util
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.prembros.weatherize.R
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
 
 /**
- *
  * Created by Prem$ on 3/31/2018.
  */
 fun View.hideKeyboard() {
@@ -21,13 +24,17 @@ fun View.hideKeyboard() {
   }
 }
 
-fun ImageView.loadUrl(url: String?, action: () -> Unit = {}) {
+fun ImageView.loadUrl(url: String?, action: (resource: Drawable?) -> Unit = {}) {
   if (!url.isNullOrEmpty()) {
-    Picasso.get().load(HTTP + url)
+    Glide.with(this)
+      .load(HTTPS + url)
       .placeholder(R.drawable.image_view_shimmer)
-      .into(this, object : Callback {
-        override fun onError(e: java.lang.Exception?) = action()
-        override fun onSuccess() = action()
-      })
+      .listener(object : RequestListener<Drawable> {
+        override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean = false
+        override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
+          action(resource)
+          return false
+        }
+      }).into(this)
   }
 }
